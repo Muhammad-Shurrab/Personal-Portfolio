@@ -12,7 +12,7 @@ Usage
 Contributing
 License
 Live Demo
-You can view the live demo of the website here.
+You can view the live demo of the website here https://muhammad-shurrab.github.io/Personal-Portfolio/.
 
 ## Technologies Used
 HTML5
