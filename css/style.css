@@ -1,0 +1,650 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  color: white;
+  font-size: 1.2rem;
+  background-color: #212529;
+  position: relative;
+}
+
+.section {
+  margin-bottom: 7rem;
+}
+
+.container {
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h2 {
+  margin-bottom: 3rem;
+}
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid #76abae;
+  width: 100%;
+  top: 0;
+  position: sticky;
+  z-index: 1;
+  background-color: #212529;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.nav-list {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link a {
+  color: #76abae;
+  text-decoration: none;
+}
+
+.nav-link a:hover {
+  color: #76abae;
+  border-bottom: 2px solid #76abae;
+}
+
+.hire {
+  border: 1px solid #76abae;
+  background: #212529;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10%;
+  transition: 0.4s;
+}
+
+.hire:hover {
+  background: #76abae;
+  color: white;
+}
+.hire:hover a {
+  color: white;
+}
+
+/* Bio Section */
+.bio {
+  display: grid;
+  grid-template-columns: 2fr 1.7fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+#bio {
+  margin: 5rem 0;
+}
+.bio-heading span {
+  color: #76abae;
+}
+
+.bio-name {
+  color: #76abae;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.bio-img {
+  position: relative;
+}
+
+.bio-img img {
+  width: 70%;
+  max-width: 80%;
+  position: relative;
+  height: auto;
+}
+
+.bio-img::before {
+  content: "";
+  display: inline-block;
+  background-color: #76abae;
+  height: 90%;
+  width: 90%;
+  border-radius: 20px;
+  position: absolute;
+  left: -5%;
+  top: 13%;
+  z-index: 0;
+}
+
+.bio-links {
+  background-color: #76abae;
+  color: #212529;
+  padding: 0.8rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.insta {
+  color: red;
+}
+.facebook {
+  color: aqua;
+}
+
+.bio-links:hover {
+  background-color: #eeeeee;
+  color: #76abae;
+  transition: 0.4s;
+}
+
+.bio-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0.5rem);
+    -webkit-transform: translateY(0.5rem);
+    -moz-transform: translateY(0.5rem);
+    -ms-transform: translateY(0.5rem);
+    -o-transform: translateY(0.5rem);
+  }
+
+  35% {
+    transform: translateY(-0.5rem);
+    -webkit-transform: translateY(-0.5rem);
+    -moz-transform: translateY(-0.5rem);
+    -ms-transform: translateY(-0.5rem);
+    -o-transform: translateY(-0.5rem);
+  }
+
+  70% {
+    transform: translateY(0rem);
+    -webkit-transform: translateY(0rem);
+    -moz-transform: translateY(0rem);
+    -ms-transform: translateY(0rem);
+    -o-transform: translateY(0rem);
+  }
+
+  100% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+}
+
+.bio-arrow {
+  display: inline-block;
+  animation: jump 1s infinite alternate ease-in-out;
+  -webkit-animation: jump 1s infinite alternate ease-in-out;
+}
+
+/* .facebook {
+  color: ;
+} */
+/* Education */
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  display: flex;
+  gap: 0;
+}
+
+/* The actual timeline (the vertical ruler) */
+
+/* Container around content */
+.container {
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+/* .container::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #76abae;
+  border: 4px solid #eee;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+} */
+
+/* Place the container to the left */
+.left {
+  left: -13.9rem;
+  top: -2rem;
+}
+
+/* Place the container to the right */
+.right {
+  left: 13.9rem;
+  top: -2rem;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #76abae;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #76abae;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #76abae;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #76abae transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: #212529;
+  border: 1px solid #76abae;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 2rem;
+    display: none;
+  }
+
+  .content {
+    margin: 2rem 0;
+  }
+
+  /* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 5rem;
+    padding-right: 1rem;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 2rem;
+    border: medium solid white;
+    border-width: 0.7rem 0.7rem 0.7rem 0;
+    border-color: transparent white transparent transparent;
+    display: none;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    left: 0.5rem;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+/* Technology Section */
+.tech-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  column-gap: 2rem;
+  /* margin: 5rem 0; */
+  /* gap: 2rem; */
+}
+
+.tech h2 {
+  margin-top: 2rem;
+}
+
+.tech-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #76abae;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.tech-card:hover {
+  box-shadow: 0 0 10px rgba(118, 171, 174, 0.2);
+}
+
+.tech-card i {
+  color: rgb(118, 171, 174);
+}
+
+.skill-card h4 {
+  font-weight: semi-bold;
+  font-size: 1.5rem;
+  color: #76abae;
+}
+
+/* Projects Section */
+.project-items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.project-item img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.project-item:hover img {
+  transform: scale(1.05);
+}
+
+.project-details {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.project-details h3 {
+  font-weight: 600;
+  color: #76abae;
+}
+
+.project-details a {
+  border: 1px solid #76abae;
+  text-decoration: none;
+  color: #eeeeee;
+  padding: 0.5rem;
+}
+
+.project-details a:hover {
+  background-color: #eeeeee;
+  color: #76abae;
+  transition: 0.4s;
+}
+
+/* Contact Section */
+
+.contact-channels h2 {
+  margin-bottom: 3rem;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.contact__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.contact__input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #76abae;
+  border-radius: 4px;
+  background: transparent;
+  color: #eee;
+}
+
+.contact__textarea {
+  height: 100px;
+  margin: 2rem 0;
+}
+
+.contact__button {
+  background-color: #76abae;
+  color: #212529;
+  padding: 0.5rem 1rem;
+  border: 1px solid #76abae;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact__button:hover {
+  background-color: #eeeeee;
+  color: #76abae;
+}
+
+.contact__socials {
+  display: flex;
+
+  gap: 1rem;
+}
+
+.contact__email:hover {
+  color: #76abae;
+}
+
+.contact__socials i {
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.contact__socials i:hover {
+  color: #76abae;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+.contact__social a {
+  color: #eeeeee;
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.contact__social a:hover {
+  transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .bio {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-img {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100vh;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .bio {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .tech-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .tech h2 {
+    margin: 1.5rem 0;
+  }
+
+  .tech-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-items {
+    grid-template-columns: 1fr;
+  }
+
+  .contacts {
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .hire {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .bio-heading {
+    font-size: 1.5rem;
+  }
+
+  .bio-name {
+    font-size: 1.2rem;
+  }
+
+  .bio-links {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+
+  .contact__button {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .bio {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-img {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .bio {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .tech-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .project-items {
+    grid-template-columns: 1fr;
+  }
+
+  .contacts {
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .hire {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .bio-heading {
+    font-size: 1.5rem;
+  }
+
+  .bio-name {
+    font-size: 1.2rem;
+  }
+
+  .bio-links {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+
+  .contact__button {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}
