@@ -17,6 +17,7 @@ You can view the live demo of the website here https://muhammad-shurrab.github.i
 ## Technologies Used
 HTML5
 CSS3
+JavaScript
 Bootstrap 5
 Font Awesome
 Features
