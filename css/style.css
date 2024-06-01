@@ -106,7 +106,7 @@ header {
 }
 
 .bio-img img {
-  width: 70%;
+  width: 76%;
   max-width: 80%;
   position: relative;
   height: auto;
@@ -116,12 +116,12 @@ header {
   content: "";
   display: inline-block;
   background-color: #76abae;
-  height: 90%;
+  height: 83%;
   width: 90%;
   border-radius: 20px;
   position: absolute;
-  left: -5%;
-  top: 13%;
+  left: -8%;
+  top: 19%;
   z-index: 0;
 }
 
